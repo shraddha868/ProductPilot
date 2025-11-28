@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductPilot</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="app-bg font-inter">
+    <div class="page-center">
+        <header class="header card">
+            <div class="title">
+                <h1>ProductPilot</h1>
+                <p class="subtitle">Smart replies for product & customer conversations</p>
+            </div>
+            <div class="brand">PP</div>
+        </header>
+
+        <!-- Products quick-links -->
+        <section class="card products" aria-label="Product links">
+            <div class="product-card">
+                <a href="https://example.com/product-1" target="_blank" rel="noopener noreferrer">
+                    <strong>Product Alpha</strong>
+                    <span class="prod-desc">Roadmapping & insights</span>
+                </a>
+            </div>
+            <div class="product-card">
+                <a href="https://example.com/product-2" target="_blank" rel="noopener noreferrer">
+                    <strong>Product Beta</strong>
+                    <span class="prod-desc">Customer intelligence</span>
+                </a>
+            </div>
+            <div class="product-card">
+                <a href="https://example.com/product-3" target="_blank" rel="noopener noreferrer">
+                    <strong>Product Gamma</strong>
+                    <span class="prod-desc">Experiment tracking</span>
+                </a>
+            </div>
+        </section>
+
+        <main class="card chat-card" id="chat-container">
+            <div id="messages" class="messages" aria-live="polite">
+                <div class="welcome">
+                    <h2>Welcome to ProductPilot</h2>
+                    <p>Ask a question about your product, roadmap, or customers.</p>
+                </div>
+            </div>
+        </main>
+
+        <div class="composer-wrap">
+            <div class="composer card">
+                <textarea id="input" rows="2" placeholder="Type your question..." aria-label="Message input"></textarea>
+                <button id="ask" class="send-btn" title="Send">Ask</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

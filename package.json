@@ -1,0 +1,22 @@
+{
+  "name": "ai_agent2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tavily/core": "^0.5.13",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "grok-sdk": "^0.0.1-security",
+    "groq-sdk": "^0.37.0",
+    "openai": "^6.9.1"
+  }
+}

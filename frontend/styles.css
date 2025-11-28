@@ -1,0 +1,61 @@
+/* Color palette and styles for ProductPilot UI */
+:root{
+  --bg-1: #0f1724; /* deep navy */
+  --bg-2: #0b1220;
+  --card: #0f1728;
+  --muted: #9aa4b2;
+  --accent: #7c5cff; /* purple */
+  --accent-2: #00d4ff; /* cyan */
+  --user-bubble: linear-gradient(135deg,#6ee7b7 0%, #34d399 100%);
+  --assistant-bubble: linear-gradient(135deg,#f8fafc 0%, #e6eef8 100%);
+}
+
+/* Base */
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#e6eef8;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));min-height:100vh}
+.app-bg{min-height:100vh}
+.page-center{max-width:960px;margin:28px auto;padding:12px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:16px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.title h1{margin:0;font-size:20px;font-weight:700;color:var(--accent)}
+.title .subtitle{margin:2px 0 0 0;color:var(--muted);font-size:13px}
+.brand{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;padding:8px 12px;border-radius:10px;font-weight:700}
+
+.chat-card{height:64vh;display:flex;flex-direction:column;padding:12px;overflow:hidden}
+.messages{flex:1;overflow:auto;padding-right:8px}
+.welcome{color:var(--muted);padding:20px 12px}
+
+/* Products row */
+.products{display:flex;gap:12px;margin:12px 0;padding:12px;align-items:stretch}
+.product-card{flex:1;border-radius:12px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.03);transition:transform .14s ease, box-shadow .14s ease}
+.product-card a{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.product-card strong{color:var(--accent);font-size:15px}
+.product-card .prod-desc{font-size:13px;color:var(--muted);margin-top:6px}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(12,20,40,0.5)}
+
+/* Messages */
+.message{max-width:78%;margin:12px 0;padding:12px;border-radius:14px;line-height:1.4;box-shadow:0 4px 18px rgba(2,6,23,0.5);transition:transform .12s ease, box-shadow .12s ease}
+.message:hover{transform:translateY(-3px)}
+.message.user{margin-left:auto;background:var(--user-bubble);color:#042018;text-align:left}
+.message.assistant{margin-right:auto;background:var(--assistant-bubble);color:#0b2238}
+.message .meta{font-size:11px;color:var(--muted);margin-top:8px}
+
+.loading{opacity:0.9;color:var(--muted);padding:12px;border-radius:12px}
+
+/* Composer */
+.composer-wrap{position:fixed;left:0;right:0;bottom:18px;display:flex;justify-content:center;pointer-events:none}
+.composer{width:calc(100% - 48px);max-width:960px;display:flex;gap:8px;align-items:flex-end;padding:10px 12px;border-radius:999px;pointer-events:auto}
+textarea#input{flex:1;resize:none;border:0;padding:12px;border-radius:12px;background:rgba(255,255,255,0.03);color:inherit;min-height:44px;outline:0;font-size:14px}
+textarea#input::placeholder{color:rgba(255,255,255,0.35)}
+.send-btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:10px 14px;border-radius:999px;border:0;cursor:pointer;font-weight:600}
+.send-btn:hover{filter:brightness(.98)}
+
+/* Scrollbar */
+.messages::-webkit-scrollbar{width:10px}
+.messages::-webkit-scrollbar-thumb{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border-radius:6px}
+
+/* Responsive */
+@media (max-width:600px){.page-center{margin:12px;padding:8px}.chat-card{height:58vh}}
+
+/* Utility font class */
+.font-inter{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
